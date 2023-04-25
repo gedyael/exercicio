@@ -1,48 +1,69 @@
-#selecionar qual cor por no print 
 blue= '\033[36m'
 red = '\033[31m'
 close = '\033[m'
-#print das operações
-print(f'''             {red} OPERACOES{close}
-{blue}         1- adicao
-         2- multiplicação
-         3- subtração
-         4- divisão
-            {close}''')
 
-# def criado para a soma 
-def soma ():
+def soma2():
+    N1 = int(input('digite o primeiro numero: '))
+    N2 = int(input('digite segundo numero: '))
+    somar = N1 + N2
+    print(somar)
+    Opçao_Sair()
+
+def multiplicação():
+    N1 = int(input('Digite o Primeiro Numero: '))
+    N2 = int(input('Digite o Segundo Numero: '))
+    soma_multiplicaçao = N1 * N2
+    print(soma_multiplicaçao)
+    Opçao_Sair()
+def subtração():
+    N1 = int(input('Digite o Primeiro Numero: '))
+    N2 = int(input('Digite o Segundo Numero: '))
+    Resultado_Subtraçao = N1 - N2
+    print(Resultado_Subtraçao)
+    Opçao_Sair()
+def divisao():
+    N1 = int(input('Digite o Primeiro Numero: '))
+    N2 = int(input('Digite o Segundo Numero: '))
+    Resultado_Divisao = N1 / N2
+    print(round(Resultado_Divisao))
+    Opçao_Sair()
+
+def menu():
     while True:
-        entrada_1 = str((int(input('qual operacões a seguir desejar resolver? '))))  
-        N1 = int(input('informe o numero: '))
-        N2 = int(input('informe outro numero: '))
-        S_ADIÇÃO = N1 + N2
-        S_MULTIPICACÃO = N1 * N2
-        S_SUBTRAÇÃO = N1 - N2
-        S_DIVISÃO = N1 / N2
-        if entrada_1 == '1':
-            print(f'sua soma foi de {S_ADIÇÃO}')
-            entrada_2 = str(input('deseja fazer outra operação? '). upper())
+        opcao_de_entrada()
+        entrada_menu = str(input('Selecione a Opçao Desejada: '))
+        if entrada_menu == '1':
+            soma2()
+        elif entrada_menu == '2':
+            multiplicação()
+        elif entrada_menu == '3':
+            subtração()
+        elif entrada_menu == '4':
+            divisao()   
+        else:
+            print(f'{red}Opçao invalida....{close}')
 
-        if entrada_1 == '2':
-            print(f'sua soma foi de {S_MULTIPICACÃO}')
-            entrada_2 = str(input('deseja fazer outra operação? '). upper())
+def opcao_de_entrada():
+    print(f'''{blue}
+        1- ADIÇAO
+        2- MULTIPLICAÇAO
+        3- SUBTRAÇAO
+        4- DIVISÃO{close}''')    
 
-        if entrada_1 == '3':
-            print(f'sua soma foi de {S_SUBTRAÇÃO}')
-            entrada_2 = str(input('deseja fazer outra operação? '). upper())
+def Opçao_Sair():
+    escolha = str(input('Deseja Fazer outra Operação? ').upper())
+    if escolha == 'SIM':
+        menu()
+    elif escolha == 'NAO':
+        print(f'{red}FECHANDO PROGRAMA....{close}')
+        exit()
+    else:
+        print(f'{red}Opçao invalida!{close}')
+        Opçao_Sair()
+menu()
 
-        if entrada_1 == '4':
-            print(f'sua soma foi de {S_DIVISÃO}')
-            entrada_2 = str(input('deseja fazer outra operação? '). upper())
-                        
-        if entrada_2 == 'SIM':
-            (entrada_1)
-        if entrada_2 == 'NAO':
-            print('Fechando programa....')
-            break    
-soma()    
-    
+
+
        
         
 
