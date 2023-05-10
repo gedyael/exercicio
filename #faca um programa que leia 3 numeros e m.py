@@ -1,3 +1,4 @@
+#informar qual dos numeros e maior e o menor 
 num1 = int(input("digite um numero: "))
 num2 = int(input("digite segundo numero: "))
 num3 = int(input("digite outro numero: "))
