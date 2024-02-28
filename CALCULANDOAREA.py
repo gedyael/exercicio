@@ -19,8 +19,14 @@ B = float(valores[0][1])
 C = float(valores[0][2])
 
 Pi = 3.14159
-resultadoA = (A * C) /2
-resultadoB = (C * C * Pi )
+calculo_area_do_trianguloretangulo = (A * C) /2
+calculo_do_circulo= (Pi * C**2)
+calculo_do_trapezio = (A + B)*C /2
+calculo_do_quadrado = B**2
+calculo_do_retangulo = A * B
 
-print("TRIANGULO:" "%.3f"%resultadoA)
-print("CIRCULO:""%.3f"%resultadoB)
+print("TRIÂNGULO:", "%.3f"%calculo_area_do_trianguloretangulo)
+print("CÍRCULO:", "%.3f"%calculo_do_circulo)
+print("TRAPÉZIO:", "%.3f"%calculo_do_trapezio)
+print("QUADRADO:", "%.3f"%calculo_do_quadrado)
+print("RETÂNGULO:", "%.3F"%calculo_do_retangulo)
